@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">UIT CINEMA</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="name"></string>
+    <string name="user"></string>
+    <string name="confirm"></string>
+    <string name="isLogin">fasle</string>
+    <string name="content1">Để khuyến khích các bạn học sinh, sinh viên cũng như tạo nhiều cơ hội hơn cho các bạn xem những siêu phẩm điện ảnh đình đám, BHD Star chính thức áp dụng chính sách giá vé 45k. Ưu đãi chỉ dành riêng cho các bạn thành viên dưới 22 tuổi thôi đó.
+    Cách thức hưởng ưu đãi cực đơn giản:
+        Bước 1: Đăng ký tài khoản thành viên BHD Star tại www.bhdstar.vn/dang-ky (Bỏ qua bước này nếu bạn đã có tài khoản rồi nhé)
+        Bước 2: Đến rạp BHD Star gần nhất và xuất trình giấy tờ tuỳ thân chứng minh “Em chưa 22” (CMND hoặc giấy tờ tuỳ thân có ảnh và năm sinh) và đọc thông tin tài khoản đã đăng ký (email hoặc số điện thoại) cho nhân viên để kích hoạt tài khoản Thành Viên U22 nhé ♥️</string>
+    <string name="content2">Hoàn tiền ngay 10% khi mua vé bằng Ví MoMo
+        Từ giờ đặt vé đã quá dễ dàng cho các tín đồ mê phim khi vừa có thể chọn chỗ ngồi đẹp, lại vừa được hoàn tiền 10% siêu tiết kiệm khi mua vé xem phim BHD Star và chọn thanh toán bằng Ví MoMo. Đặc biệt là bạn có thể mua KHÔNG GIỚI HẠN số lượng vé mà vẫn được hoàn tiền 10%.
+        Điều kiện chương trình:
+        Thời gian chương trình: Từ 04/03/2021 – đến khi có thông báo mới
+        Chương trình áp dụng cho tất cả các khách hàng của Ví MoMo và cho tất cả các loại vé của BHD Star (không áp dụng cho combo và dịch vụ đi kèm)
+        Ưu đãi áp dụng cho các khách hàng đang liên kết ngân hàng với Ví MoMo.
+        Ưu đãi không được áp dụng đồng thời với ưu đãi hoặc thẻ quà khác.</string>
+    <string name="content3">Lễ này đến BHD Star để rinh ngay phần quà hấp dẫn thôi nè. Cụ thể:
+        Tặng 01 sữa rửa mặt Nivea khi mua combo special bất kỳ tại BHD Star Quang Trung từ ngày 29.04.2021.
+        Lưu ý:
+        – Số lượng quà tặng có hạn, chương trình sẽ kết thúc khi hết quà tặng.
+        – Quà tặng ngẫu nhiên trong các dòng sản phẩm sữa rửa mặt của Nivea.
+        – Trong mọi trường hợp, quyết định thuộc về BHD Star Cineplex.
+    </string>
+    <string name="content4">Khởi đầu 01 tuần mới thật vui vẻ vì đã có “HAPPY MONDAY” của BHD Star
+        Với “HAPPY MONDAY”, bạn được gì?
+        Xem phim 2D chỉ từ 50,000đ/vé
+        Xem phim 3D chỉ từ 80,000đ/vé
+        *  Giá vé có thể thay đổi theo từng rạp. Xin vui lòng truy cập website mục “Hệ Thống Rạp” để biết giá vé cụ thể.</string>
+</resources>
