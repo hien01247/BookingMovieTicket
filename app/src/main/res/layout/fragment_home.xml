@@ -44,8 +44,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_movie"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="409dp"
+        android:layout_height="190dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -58,7 +58,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="4dp"
         android:text="Các chương trình, sự kiên"
         android:textSize="15sp"
         android:textStyle="bold"
