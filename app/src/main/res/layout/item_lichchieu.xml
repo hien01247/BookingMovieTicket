@@ -4,80 +4,87 @@
     android:layout_height="wrap_content"
     android:layout_marginTop="20dp"
     android:layout_marginEnd="20dp">
-        <RelativeLayout
-            android:layout_width="match_parent"
+
+    <RelativeLayout
+        android:layout_width="415dp"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_phim"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:background="@drawable/tthm"
+            android:padding="10dp"></ImageView>
+
+        <TextView
+            android:id="@+id/txt_ticket_movie"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-           >
-            <ImageView
-                android:id="@+id/img_phim"
-                android:layout_width="100dp"
-                android:layout_height="150dp"
-                android:padding="10dp"
-                android:background="@drawable/tthm"></ImageView>
-            <TextView
-                android:id="@+id/tv_tenphim"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Thiên thần hộ mệnh"
-                android:layout_marginTop="50dp"
-                android:layout_marginStart="20dp"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:layout_toEndOf="@+id/img_phim"></TextView>
-            <TextView
-                android:id="@+id/tv_danhgia"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="9/10"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="20dp"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:layout_toEndOf="@+id/img_phim"
-                android:layout_below="@+id/tv_tenphim"></TextView>
-            <ImageView
-                android:id="@+id/img_2d"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginStart="10dp"
-                android:layout_below="@+id/img_phim"
-                android:layout_marginTop="10dp"
-                android:padding="10dp"
-                android:background="@drawable/haid"></ImageView>
-            <TextView
-                android:id="@+id/tv_xc1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="13:00"
-                android:layout_marginTop="70dp"
-                android:layout_marginStart="30dp"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:layout_toEndOf="@+id/img_2d"
-                android:layout_below="@+id/tv_danhgia"></TextView>
-            <TextView
-                android:id="@+id/tv_xc2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="13:00"
-                android:layout_marginTop="70dp"
-                android:layout_marginStart="20dp"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:layout_toEndOf="@+id/tv_xc1"
-                android:layout_below="@+id/tv_danhgia"></TextView>
-            <TextView
-                android:id="@+id/tv_xc3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="13:00"
-                android:layout_marginTop="70dp"
-                android:layout_marginStart="20dp"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:layout_toEndOf="@+id/tv_xc2"
-                android:layout_below="@+id/tv_danhgia"></TextView>
-        </RelativeLayout>
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_toEndOf="@+id/img_phim"
+            android:text="Thiên thần hộ mệnh"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:id="@+id/tv_danhgia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_ticket_movie"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/img_phim"
+            android:text="9/10"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"></TextView>
+
+        <ImageView
+            android:id="@+id/img_2d"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/img_phim"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/haid"
+            android:padding="10dp"></ImageView>
+
+        <TextView
+            android:id="@+id/tv_xc1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_danhgia"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="70dp"
+            android:layout_toEndOf="@+id/img_2d"
+            android:text="13:00"
+            android:textColor="@color/black"
+            android:textSize="20sp"></TextView>
+
+        <TextView
+            android:id="@+id/tv_xc2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_danhgia"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="70dp"
+            android:layout_toEndOf="@+id/tv_xc1"
+            android:text="13:00"
+            android:textColor="@color/black"
+            android:textSize="20sp"></TextView>
+
+        <TextView
+            android:id="@+id/tv_xc3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_danhgia"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="70dp"
+            android:layout_toEndOf="@+id/tv_xc2"
+            android:text="13:00"
+            android:textColor="@color/black"
+            android:textSize="20sp"></TextView>
+    </RelativeLayout>
 </androidx.cardview.widget.CardView>

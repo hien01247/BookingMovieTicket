@@ -66,7 +66,7 @@ public class LichChieuAdapter extends RecyclerView.Adapter<LichChieuAdapter.Lich
         public LichChieuViewHolder(@NonNull View itemView) {
             super(itemView);
             imgPhim=itemView.findViewById(R.id.img_phim);
-            tvTenPhim=itemView.findViewById(R.id.tv_tenphim);
+            tvTenPhim=itemView.findViewById(R.id.txt_ticket_movie);
             tvDanhGia=itemView.findViewById(R.id.tv_danhgia);
             img2d=itemView.findViewById(R.id.img_2d);
             tvXc1=itemView.findViewById(R.id.tv_xc1);

@@ -86,8 +86,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.movie:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Showtimefragment()).commit();
                 break;
-            case R.id.ticket:
-                Toast.makeText(this,"Vé của bạn",Toast.LENGTH_SHORT).show();
+            case R.id.store:
+                Toast.makeText(this,"Ticket",Toast.LENGTH_SHORT).show();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Ticketfragment()).commit();
                 break;
             case R.id.person:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Accountfragment()).commit();
@@ -138,18 +139,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
     public void updateNav() {
-        /*SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor = preferences.edit();
-        String mail = preferences.getString(getString(R.string.user),"");
-        String name = preferences.getString(getString(R.string.name),"");
-
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editorUser = sharedPreferences.edit();
-        editorUser.putString(getString(R.string.user), username);
-        editorUser.commit();
-        editorUser.putString(getString(R.string.name), name);
-        editorUser.commit();*/
-
         Intent intent = getIntent();
         String name = intent.getStringExtra("name");
         String username = intent.getStringExtra("username");
