@@ -25,7 +25,7 @@ public class Registration extends AppCompatActivity {
                     "(?=.*[@#$%^&+=])" +     // at least 1 special character
                     "(?=\\S+$)" +            // no white spaces
                     ".{8,}" +                // at least 8 characters
-                    "$");
+                    "$");                    //
     private TextInputEditText password;
     private TextInputEditText hoten;
     private TextInputEditText email;
@@ -93,13 +93,12 @@ public class Registration extends AppCompatActivity {
 
         String emailInput = email.getText().toString().trim();
 
-        // if the email input field is empty
+
         if (emailInput.isEmpty()) {
             email.setError("Trường email không được để trống");
             return false;
         }
 
-        // Matching the input email to a predefined email pattern
         else if (!Patterns.EMAIL_ADDRESS.matcher(emailInput).matches()) {
             email.setError("Vui lòng điền đúng email");
             return false;
@@ -111,17 +110,12 @@ public class Registration extends AppCompatActivity {
 
     public boolean validatePassword() {
         String passwordInput = password.getText().toString().trim();
-        // if password field is empty
-        // it will display error message "Field can not be empty"
         if (passwordInput.isEmpty()) {
             password.setError("Trường mật khẩu không được để trống");
             return false;
         }
-
-        // if password does not matches to the pattern
-        // it will display an error message "Password is too weak"
         else if (!PASSWORD_PATTERN.matcher(passwordInput).matches()) {
-            password.setError("Mật khẩu không đủ mạnh. Mật khẩu phải tối thiểu 8 kí tự, không kí tự trắng, và chứa các kí tự đăck biệt");
+            password.setError("Mật khẩu không đủ mạnh. Mật khẩu phải tối thiểu 8 kí tự, không kí tự trắng, và chứa các kí tự đặc biệt");
             return false;
         } else {
             password.setError(null);
@@ -148,9 +142,5 @@ public class Registration extends AppCompatActivity {
         if (!validateEmail() | !validatePassword() | !validateName() | !validatePhone()) {
             return;
         }
-        // if the email and password matches, a toast message
-        // with email and password is displayed
-        /*String input = "Đăng kí thành công";
-        Toast.makeText(this, input, Toast.LENGTH_SHORT).show();*/
     }
 }

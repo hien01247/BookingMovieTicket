@@ -1,6 +1,7 @@
 package com.example.bookingmovie;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -30,6 +31,7 @@ import com.google.android.material.navigation.NavigationView;
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawerLayout;
     private  Toolbar toolbar;
+    private long pressedTime;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             navigationView.setCheckedItem(R.id.home);
         }
 
-        getSupportActionBar().setTitle(null);
+        getSupportActionBar().setTitle("Trang chủ");
         View headerView = navigationView.getHeaderView(0);
         TextView navName = headerView.findViewById(R.id.nav_name);
         TextView navEmail = headerView.findViewById(R.id.nav_mail);
@@ -61,48 +63,55 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Menu nav_Menu = navigationView.getMenu();
         nav_Menu.findItem(R.id.login).setVisible(false);}
     }
-    /*@Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_toolbar,menu);
-        return true;
-    }*/
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_toolbar, menu);
-
-        MenuItem searchItem = menu.findItem(R.id.search);
-        SearchView searchView =
-                (SearchView) searchItem.getActionView();
         return super.onCreateOptionsMenu(menu);
     }
-
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch (item.getItemId()){
+            case R.id.ticket:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Ticketfragment()).commit();
+                break;
+        }
+        return true;
+    }
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.home:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new HomeFragment()).commit();
+                getSupportActionBar().setTitle("Trang chủ");
                 break;
             case R.id.movie:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Showtimefragment()).commit();
+                getSupportActionBar().setTitle("Lịch chiếu");
                 break;
             case R.id.store:
-                Toast.makeText(this,"Ticket",Toast.LENGTH_SHORT).show();
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Ticketfragment()).commit();
+                getSupportActionBar().setTitle("Vé");
                 break;
             case R.id.person:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Accountfragment()).commit();
+                getSupportActionBar().setTitle("Thông tin tài khoản");
                 break;
-            case R.id.share:
-                Toast.makeText(this,"Share",Toast.LENGTH_SHORT).show();
+            case R.id.information:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Informationfragment()).commit();
+                getSupportActionBar().setTitle("Thông tin & điều khoản");
+                Toast.makeText(this,"Thông tin & điều khoản",Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.contact:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Accountfragment()).commit();
+            case R.id.introduction:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Introducefragment()).commit();
+                Toast.makeText(this,"Giới thiệu",Toast.LENGTH_SHORT).show();
+                getSupportActionBar().setTitle("Giới thiệu");
                 break;
             case R.id.promotion:
+                getSupportActionBar().setTitle("Khuyến mãi");
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Promotionfragment()).commit();
                 break;
             case R.id.login:
+                getSupportActionBar().setTitle("Đăng nhập");
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new LoginFragment()).commit();
                 break;
             case R.id.logout:

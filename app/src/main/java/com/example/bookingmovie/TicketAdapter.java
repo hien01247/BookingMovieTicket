@@ -1,6 +1,7 @@
 package com.example.bookingmovie;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,6 +37,10 @@ public class TicketAdapter extends RecyclerView.Adapter<TicketAdapter.MyViewHold
         holder.seat.setText(mData.get(position).getSeat());
         holder.room.setText(mData.get(position).getRoom());
         holder.img.setImageResource(mData.get(position).getImgMovie());
+        holder.img.setOnClickListener(v -> {
+            Intent intent = new Intent(mContext,TicketDetailActivity.class);
+            mContext.startActivity(intent);
+        });
     }
 
     @Override

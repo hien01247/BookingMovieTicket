@@ -14,20 +14,20 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>{
+public class PromotionAdapter extends RecyclerView.Adapter<PromotionAdapter.MyViewHolder>{
     private Context mContext;
     private List<Promotion> mData;
-    public RecyclerViewAdapter(Context mContext, List<Promotion> mData) {
+    public PromotionAdapter(Context mContext, List<Promotion> mData) {
         this.mContext = mContext;
         this.mData = mData;
     }
 
     @NonNull
     @Override
-    public RecyclerViewAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public PromotionAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(mContext).inflate(R.layout.cardview_item_promotion,parent, false);
 
-        return  new RecyclerViewAdapter.MyViewHolder(view);
+        return  new PromotionAdapter.MyViewHolder(view);
     }
 
     @Override

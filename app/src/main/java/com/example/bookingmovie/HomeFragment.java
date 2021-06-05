@@ -155,9 +155,9 @@ public class HomeFragment extends Fragment implements MovieItemClickListener,Sli
         lstPromotion.add(new Promotion(R.drawable.panel_khuyen_mai2,"Xem phim rinh quà",getString(R.string.content3)));
         lstPromotion.add(new Promotion(R.drawable.panel_khuyen_mai3,"Happy Monday",getString(R.string.content4)));
         RecyclerView recyclerView = (RecyclerView) v.findViewById(R.id.recyclerview_id);
-        RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(getContext(),lstPromotion);
+        PromotionAdapter promotionAdapter = new PromotionAdapter(getContext(),lstPromotion);
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(),2));
-        recyclerView.setAdapter(recyclerViewAdapter);
+        recyclerView.setAdapter(promotionAdapter);
 
 
         return v;

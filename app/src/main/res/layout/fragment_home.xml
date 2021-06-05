@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#464646">
+    android:background="#FFFFFF">
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPagerSlide"
         android:layout_width="match_parent"
         android:layout_height="160dp"
+        android:background="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -21,7 +22,7 @@
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="20dp"
-        android:background="@color/gray"
+        android:background="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -40,12 +41,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Phim sắp chiếu" />
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/Tab3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gợi ý phim" />
     </com.google.android.material.tabs.TabLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_movie"
-        android:layout_width="409dp"
-        android:layout_height="190dp"
+        android:layout_width="match_parent"
+        android:layout_height="216dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -58,16 +64,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="12dp"
         android:text="Các chương trình, sự kiên"
-        android:textSize="15sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rv_movie" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="290dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView">

@@ -2,12 +2,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/search"
-        android:title="Tìm kiếm"
-        app:actionViewClass="android.widget.SearchView"
-        android:icon="@drawable/ic_search"
-        app:showAsAction="ifRoom|collapseActionView"/>
-    <item
         android:id="@+id/ticket"
         android:title="Vé"
         android:icon="@drawable/ic_ticket"

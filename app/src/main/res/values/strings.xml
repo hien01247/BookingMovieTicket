@@ -29,4 +29,19 @@
         Xem phim 2D chỉ từ 50,000đ/vé
         Xem phim 3D chỉ từ 80,000đ/vé
         *  Giá vé có thể thay đổi theo từng rạp. Xin vui lòng truy cập website mục “Hệ Thống Rạp” để biết giá vé cụ thể.</string>
+    <string name="thanhtoan">Chính sách thanh toán</string>
+    <string name="noidungthanhtoan">Khách hàng có thể lựa chọn các hình thức thanh toán sau để thanh toán cho giao dịch đặt vé trên App - UIT Cinema \n - Thẻ ATM(Thẻ ghi nợ/thanh toán/trả trước nội địa)\n - Thẻ tín dụng, thẻ ghi nợ \n - Điểm thưởng thành viên UIT Cinema \n - Thẻ quà tặng \n - Ticket Voucher </string>
+    <string name="chinhsach">Quy đinh và chính sách chung</string>
+    <string name="noidung">- Vé xem phim đã hoàn tất thanh toán qua UIT Cinema sẽ không được hoàn trả trong đa số trường hợp. Trong trường hợp ban quản lý rạp không đáp ứng được việc
+    chiếu phim vì lý do kỹ thuật hay lý do bất khả kháng thì ban quản lý rạp sẽ có trách nhiệm liên hệ, thông báo, giải thích và hoàn trả vé xem phim cho khách hàng \n - Các chính sách giá hàng hóa, dịch vụ được niêm yết trên UIT Cinema.\n
+    - Nhân viên UIT Cinema có trách nhiệm giải thích rõ ràng về điều khoản sử dụng của mỗi loại hàng hóa, dịch vụ cho khách hàng. Khách hàng có trách nhiệm tìm hiểu kỹ về điều khiện sử dụng hàng hóa, dịch vụ trước khi giao dịch</string>
+    <string name="gioithieu">Về chúng tôi \n
+    1/6/2021 \n
+    <b>UIT Cinema</b> được thành lập nhằm mục đích cung cấp trải nhiệm xem phim tuyệt vời cho khách hàng. Với các mục tiêu hoạt động: \n
+        <b>Phục vụ khách hàng: </b>Chúng tôi cam kết chất lượng phục vụ theo tiêu chuẩn cao nhất qua việc thõa mãn các yêu cầu của khách hàng kịp thời, đầy đủ và chuyên nghiệp. \n
+    <b>Không gian phục vụ: </b>Chúng tôi cam kết mang đến một không gian sạch sẽ, thoải mái và thuận lợi, để khách hàng luôn cảm thấy được trân trọng và được phục vụ chu đáo. \n
+    <b>Địa điểm an toàn: </b>Chúng tôi cam kết đảm bảo một không gian giải trí an ninh và an toàn để khách hàng quay lại thường xuyên.\n
+    <b>Âm thanh hình ảnh: </b>Chúng tôi cam kết cung cấp chất lượng âm thanh và hình ảnh theo tiêu chuẩn cao nhằm gìn giữ, quảng bá và nâng cao trải nghiệm điện ảnh như chính sự kỳ vọng của các nhà làm phim và khán giả xem phim.</string>
+    <string name="ve">Vui lòng đưa mã số này đến quầy vé UIT Cinema để nhận vé của bạn</string>
+    <string name="luuy"><b>Lưu ý</b> UIT Cinema không chấp nhận hoàn tiền hoặc đổi vé đã thanh toán thành công trên website hay trên app UIT Cinema</string>
 </resources>
