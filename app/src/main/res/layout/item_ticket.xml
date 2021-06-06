@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ticket_id"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_phim"
+            android:layout_width="104dp"
+            android:layout_height="122dp"
+            android:background="@drawable/tthm"
+            android:padding="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+        <TextView
+            android:id="@+id/txt_ticket_movie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="16dp"
+            android:layout_toEndOf="@+id/img_phim"
+            android:text="Thiên thần hộ mệnh"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/img_phim"
+            app:layout_constraintTop_toTopOf="parent"></TextView>
+
+        <TextView
+            android:id="@+id/txt_ticket_date"
+            android:layout_width="69dp"
+            android:layout_height="19dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="8dp"
+            android:text="Ngày chiếu"
+            app:layout_constraintStart_toEndOf="@+id/img_phim"
+            app:layout_constraintTop_toBottomOf="@+id/txt_ticket_movie" />
+
+        <TextView
+            android:id="@+id/txt_ticket_seat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="16dp"
+            android:text="Ghế"
+            app:layout_constraintStart_toEndOf="@+id/img_phim"
+            app:layout_constraintTop_toBottomOf="@+id/txt_ticket_date" />
+
+        <TextView
+            android:id="@+id/txt_ticket_room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="44dp"
+            android:text="Phòng"
+            app:layout_constraintStart_toEndOf="@+id/txt_ticket_seat"
+            app:layout_constraintTop_toBottomOf="@+id/txt_ticket_movie" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

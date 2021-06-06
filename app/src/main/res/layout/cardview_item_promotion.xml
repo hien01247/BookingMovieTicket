@@ -4,8 +4,8 @@
     android:id="@+id/cardview_id"
     android:clickable="true"
     android:foreground="?android:attr/selectableItemBackground"
-    android:layout_width="195dp"
-    android:layout_height="170dp"
+    android:layout_width="205dp"
+    android:layout_height="175dp"
     android:layout_margin="5dp"
     app:cardCornerRadius="4dp">
     <LinearLayout
@@ -23,6 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Tiêu đề khuyến mãi"
+            android:textSize="16sp"
             android:gravity="center"/>
 
     </LinearLayout>
