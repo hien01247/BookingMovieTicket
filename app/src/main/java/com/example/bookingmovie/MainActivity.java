@@ -25,6 +25,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.example.bookingmovie.Database.BookingCinemaDatabase;
 import com.example.bookingmovie.Database.DatabaseUser;
 import com.google.android.material.navigation.NavigationView;
 
@@ -32,6 +33,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private DrawerLayout drawerLayout;
     private  Toolbar toolbar;
     private long pressedTime;
+    private BookingCinemaDatabase database;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +52,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
             navigationView.setCheckedItem(R.id.home);
         }
-
         getSupportActionBar().setTitle("Trang chủ");
         View headerView = navigationView.getHeaderView(0);
         TextView navName = headerView.findViewById(R.id.nav_name);
@@ -62,7 +64,65 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (navEmail.getText().toString()!="Username"&&navName.getText().toString()!="Name"&&navEmail.getText().toString()!=""&&navName.getText().toString()!=""){
         Menu nav_Menu = navigationView.getMenu();
         nav_Menu.findItem(R.id.login).setVisible(false);}
+        database = new BookingCinemaDatabase(this);
+        database.open();
+        SharedPreferences preferences = getPreferences(MODE_PRIVATE);
+        String data = preferences.getString("Data","No");
+        if (data.equals("No")){
+            khoitaodatabase();
+            dataKhuyenMai();
+            dataPhim();
+            dataDichVu();
+            dataPhongChieu();
+            dataLichChieu();
+        }
+        database.close();
     }
+    public void khoitaodatabase(){
+        SharedPreferences preferences = getPreferences(MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString("Data","Yes");
+        editor.apply();
+    }
+    private void dataKhuyenMai() {
+        database.insertKhuyenMai("Thành viên U22","Giảm","21/4/2021","29/4/2021",1);
+        database.insertKhuyenMai("Thành viên U22","Giảm","21/4/2021","29/4/2021",1);
+        database.insertKhuyenMai("Thành viên U22","Giảm","21/4/2021","29/4/2021",1);
+    }
+
+    public void dataDichVu(){
+        database.insertDichVu("Bỏng ngô",20000);
+        database.insertDichVu("Nước ngọt có ga",20000);
+        database.insertDichVu("Combo nước ngọt & bỏng ngô",30000);
+    }
+    public void dataPhim(){
+        database.insertPhim("Thiên thần hộ mệnh","Cái chết của một cô ca sĩ nổi tiếng dẫn đến sự thành công cào đến sự giúp đỡ của một thiên thần hộ mệnh?","C13","30/4/2021","Tâm lý","124 phút", R.drawable.tthm);
+        database.insertPhim("Thám tử lừng danh Conan", "Thế vận hội thể thao lớn nhất thế giới được tổ chức tại Tokyo, Nhật Bản thu hút rất nhiều sự chú ý. Khi sự kiện ra mắt con tàu siêu tốc với tốc độ 1000km/h diễn ra cũng là lúc hàng loạt các vụ " +
+                "bắt cóc xảy ra! Gia tộc hiểm ác tụ tập tại đây sẽ gây ra một loạt sự kiện chấn động thế giới!","P","23/4/2021","Hành động","101 phút",R.drawable.conan);;
+        database.insertPhim("Bàn tay của  quỉ", "Sau khi bản thân bỗng nhiên sở hữu “Bàn tay diệt quỷ”, võ sĩ MMA Yong Hoo (Park Seo Joon thủ vai) đã dấn thân vào hành trình trừ tà, trục quỷ đối đầu với Giám Mục Bóng Tối (Woo Do Hwan) – " +
+                "tên quỷ Satan đột lốt người. Từ đó sự thật về cái chết của cha Yong Hoo cũng dần được hé lộ cũng như nguyên nhân anh trở thành 'người được chọn'","C18","23/4/2021","kinh dịch","96 phút",R.drawable.bantay);
+        database.insertPhim("FAST AND FARIOUS 9", "Mắc kẹt trong một vòng lặp thời gi","C13","25/4/2021","Hành động","113 phút",R.drawable.ff);
+    }
+
+    public void dataPhongChieu(){
+        database.insertPhongChieu("PC01",10,12);
+        database.insertPhongChieu("PC02",10,12);
+        database.insertPhongChieu("PC03",10,12);
+    }
+
+    public void dataLichChieu(){
+        database.insertLichChieu(1,1,"2D","17:00","05/06/2021",45000);
+        database.insertLichChieu(1,2,"2D","19:00","05/06/2021",45000);
+        database.insertLichChieu(1,3,"2D","20:00","05/06/2021",45000);
+        database.insertLichChieu(1,2,"2D","21:00","05/06/2021",45000);
+        database.insertLichChieu(2,1,"2D","17:00","05/06/2021",45000);
+        database.insertLichChieu(2,2,"2D","20:00","06/06/2021",45000);
+        database.insertLichChieu(3,3,"2D","13:00","05/06/2021",45000);
+        database.insertLichChieu(3,3,"2D","17:00","05/06/2021",45000);
+        database.insertLichChieu(4,2,"2D","18:00","05/06/2021",45000);
+
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_toolbar, menu);
@@ -160,6 +220,5 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             navEmail.setText(username);
             navName.setText(name);
         }
-
     }
 }

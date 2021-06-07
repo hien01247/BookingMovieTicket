@@ -1,4 +1,4 @@
-package com.example.bookingmovie;
+package com.example.bookingmovie.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,6 +11,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.bookingmovie.R;
+import com.example.bookingmovie.Ticket;
+import com.example.bookingmovie.TicketDetailActivity;
 
 import java.util.List;
 
@@ -25,9 +29,9 @@ public class TicketAdapter extends RecyclerView.Adapter<TicketAdapter.MyViewHold
 
     @NonNull
     @Override
-    public TicketAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(mContext).inflate(R.layout.item_ticket,parent, false);
-        return new TicketAdapter.MyViewHolder(view);
+        return new MyViewHolder(view);
     }
 
     @Override
@@ -37,8 +41,8 @@ public class TicketAdapter extends RecyclerView.Adapter<TicketAdapter.MyViewHold
         holder.seat.setText(mData.get(position).getSeat());
         holder.room.setText(mData.get(position).getRoom());
         holder.img.setImageResource(mData.get(position).getImgMovie());
-        holder.img.setOnClickListener(v -> {
-            Intent intent = new Intent(mContext,TicketDetailActivity.class);
+        holder.cardView.setOnClickListener(v -> {
+            Intent intent = new Intent(mContext, TicketDetailActivity.class);
             mContext.startActivity(intent);
         });
     }
@@ -63,6 +67,5 @@ public class TicketAdapter extends RecyclerView.Adapter<TicketAdapter.MyViewHold
             img = itemView.findViewById(R.id.img_phim);
             cardView = itemView.findViewById(R.id.ticket_id);
         }
-
     }
 }

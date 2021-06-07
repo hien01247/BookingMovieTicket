@@ -11,6 +11,8 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.bookingmovie.adapter.TicketAdapter;
+
 import java.util.ArrayList;
 import java.util.List;
 

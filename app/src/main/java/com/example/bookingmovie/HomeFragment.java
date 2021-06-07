@@ -32,6 +32,7 @@ import androidx.viewpager2.widget.CompositePageTransformer;
 import androidx.viewpager2.widget.MarginPageTransformer;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.example.bookingmovie.adapter.MovieAdapter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.tabs.TabLayout;
 
@@ -113,12 +114,6 @@ public class HomeFragment extends Fragment implements MovieItemClickListener,Sli
         });
 
         List<SliderItem> sliderItems = new ArrayList<>();
-
-        /*sliderItems.add(new SliderItem(R.drawable.panel_khuyen_mai,"Thành viên U22",getString(R.string.content1)));
-        sliderItems.add(new SliderItem(R.drawable.panel_khuyen_mai1,"Thanh toán giảm 10% trên Momo",getString(R.string.content2)));
-        sliderItems.add(new SliderItem(R.drawable.panel_khuyen_mai2,"Xem phim rinh quà",getString(R.string.content3)));
-        sliderItems.add(new SliderItem(R.drawable.panel_khuyen_mai3,"Happy Monday",getString(R.string.content4)));*/
-
 
         sliderItems.add(new SliderItem(R.drawable.panel_khuyen_mai,"Thành viên U22",getString(R.string.content1)));
         sliderItems.add(new SliderItem(R.drawable.panel_khuyen_mai1,"Thanh toán giảm 10% trên Momo",getString(R.string.content2)));

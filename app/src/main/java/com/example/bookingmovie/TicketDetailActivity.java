@@ -12,7 +12,7 @@ public class TicketDetailActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ticket_detail);
+        setContentView(R.layout.activity_ticket_detail1);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Thông tin vé");

@@ -2,89 +2,131 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="20dp"
-    android:layout_marginEnd="20dp">
+    android:layout_marginTop="10dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp">
 
     <RelativeLayout
-        android:layout_width="415dp"
-        android:layout_height="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/img_phim"
-            android:layout_width="100dp"
-            android:layout_height="150dp"
+            android:layout_width="110dp"
+            android:layout_height="160dp"
             android:background="@drawable/tthm"
             android:padding="10dp"></ImageView>
 
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_24"></ImageView>
+
         <TextView
-            android:id="@+id/txt_ticket_movie"
+            android:id="@+id/tv_tenphim"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="10dp"
             android:layout_toEndOf="@+id/img_phim"
             android:text="Thiên thần hộ mệnh"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"></TextView>
 
+        <ImageView
+            android:id="@+id/img_danhgia"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/tv_tenphim"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/img_phim"
+            android:src="@drawable/saovang"></ImageView>
+
         <TextView
             android:id="@+id/tv_danhgia"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/txt_ticket_movie"
+            android:layout_below="@+id/tv_tenphim"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/img_danhgia"
+            android:text="9/10"
+            android:textColor="@color/black"
+            android:textSize="16sp"></TextView>
+
+        <TextView
+            android:id="@+id/tv_doituong"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_tenphim"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/tv_danhgia"
+            android:background="@color/blue"
+            android:text="C13"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16sp"></TextView>
+
+        <TextView
+            android:id="@+id/tv_namSx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_danhgia"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
             android:layout_toEndOf="@+id/img_phim"
-            android:text="9/10"
+            android:text="2021"
             android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold"></TextView>
+            android:textSize="16sp"></TextView>
+
+        <TextView
+            android:id="@+id/tv_thoigian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_danhgia"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/tv_namSx"
+            android:drawableLeft="@drawable/ic_baseline_access_time_24"
+            android:text="112 phút"
+            android:textColor="@color/black"
+            android:textSize="16sp"></TextView>
 
         <ImageView
             android:id="@+id/img_2d"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_below="@+id/img_phim"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/haid"
-            android:padding="10dp"></ImageView>
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_below="@+id/tv_namSx"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_toEndOf="@+id/img_phim"
+            android:background="@drawable/haid"></ImageView>
 
-        <TextView
-            android:id="@+id/tv_xc1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_danhgia"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="70dp"
+        <ImageView
+            android:id="@+id/img_3d"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_below="@+id/tv_namSx"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="25dp"
             android:layout_toEndOf="@+id/img_2d"
-            android:text="13:00"
-            android:textColor="@color/black"
-            android:textSize="20sp"></TextView>
+            android:background="@drawable/trang"></ImageView>
 
-        <TextView
-            android:id="@+id/tv_xc2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_danhgia"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="70dp"
-            android:layout_toEndOf="@+id/tv_xc1"
-            android:text="13:00"
-            android:textColor="@color/black"
-            android:textSize="20sp"></TextView>
+        <ImageView
+            android:id="@+id/img_imax"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_below="@+id/tv_namSx"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="25dp"
+            android:layout_toEndOf="@+id/img_3d"
+            android:background="@drawable/trang"></ImageView>
 
-        <TextView
-            android:id="@+id/tv_xc3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_danhgia"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="70dp"
-            android:layout_toEndOf="@+id/tv_xc2"
-            android:text="13:00"
-            android:textColor="@color/black"
-            android:textSize="20sp"></TextView>
+
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
