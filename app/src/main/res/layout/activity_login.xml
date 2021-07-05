@@ -8,6 +8,7 @@
 
 
     <Button
+        android:background="@drawable/roundstyle"
         android:id="@+id/button_SI_gSignIn"
         android:layout_width="288dp"
         android:layout_height="wrap_content"
@@ -22,6 +23,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_Reg" />
 
     <ImageView
+        android:background="@drawable/roundstyle"
         android:layout_width="210dp"
         android:layout_height="134dp"
         android:src="@drawable/logo_app"
@@ -76,10 +78,11 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
+        android:background="@drawable/roundstyle"
+        android:backgroundTint="#db402c"
         android:id="@+id/btn_Sign"
         android:layout_width="312dp"
         android:layout_height="50dp"
-        android:background="#db402c"
         android:text="Đăng nhập"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -89,6 +92,8 @@
         app:layout_constraintVertical_bias="0.588" />
 
     <Button
+        android:background="@drawable/roundstyle"
+        android:backgroundTint="#C8C4C3"
         android:id="@+id/btn_Reg"
         android:layout_width="288dp"
         android:layout_height="49dp"
