@@ -32,7 +32,6 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
@@ -73,7 +72,7 @@ public class Login extends AppCompatActivity {
         txForget.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),forgetpass1.class);
+                Intent intent = new Intent(getApplicationContext(), ForgetPass.class);
                 startActivity(intent);
             }
         });
@@ -95,16 +94,23 @@ public class Login extends AppCompatActivity {
                                 public void onComplete(@NonNull Task<AuthResult> task) {        // Check if the sign in is successful
 
                                     if (task.isSuccessful()) {
+                                        FirebaseUser users = FirebaseAuth.getInstance().getCurrentUser();
+                                        if (users.isEmailVerified()){
+                                            Toast.makeText(Login.this, "Đăng nhập thành công", Toast.LENGTH_LONG).show();
 
-                                        Toast.makeText(Login.this, "Đăng nhập thành công", Toast.LENGTH_LONG).show();
+                                            SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("Login", Context.MODE_PRIVATE);
+                                            SharedPreferences.Editor editor = sharedPreferences.edit();
+                                            editor.putString("Login","true");
+                                            editor.putString("username",user);
+                                            editor.commit();
+                                            Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                                            startActivity(intent);
+                                        }else{
+                                            users.sendEmailVerification();
+                                            Toast.makeText(Login.this, "Tài khoản chưa được xác thực. Truy cập email của bạn để xác thực tài khoản", Toast.LENGTH_LONG).show();
+                                        }
 
-                                        SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("Login", Context.MODE_PRIVATE);
-                                        SharedPreferences.Editor editor = sharedPreferences.edit();
-                                        editor.putString("Login","true");
-                                        editor.putString("username",user);
-                                        editor.commit();
-                                        Intent intent = new Intent(getApplicationContext(),MainActivity.class);
-                                        startActivity(intent);
+
 
                                     }
 

@@ -59,8 +59,7 @@
         <activity android:name=".TicketsDetailActivity" />
         <activity android:name=".PromotionDetailActivity" />
         <activity android:name=".SliderDetailActivity" />
-        <activity android:name=".forgetpass2" />
-        <activity android:name=".forgetpass1" />
+        <activity android:name=".ForgetPass" />
         <activity android:name=".Registration" />
         <activity android:name=".MovieDetailActivity" />
         <activity

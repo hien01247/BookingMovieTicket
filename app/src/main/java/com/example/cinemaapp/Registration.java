@@ -24,6 +24,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.regex.Pattern;
@@ -179,9 +180,11 @@ public class Registration extends AppCompatActivity {
                                             public void onComplete(@NonNull Task<Void> task) {      // Check if the user information was stored in the DB
 
                                                 if (task.isSuccessful()) {
+                                                    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                                                    user.sendEmailVerification();
                                                     AlertDialog.Builder b = new AlertDialog.Builder(Registration.this);
                                                     b.setTitle("Thông báo");
-                                                    b.setMessage("Đăng kí tài khoản mới thành công!!!");
+                                                    b.setMessage("Đăng kí tài khoản mới thành công! Kiểm tra email để xác nhận tài khoản! ");
                                                     b.setPositiveButton("Kết thúc!", new DialogInterface.OnClickListener() {
                                                         public void onClick(DialogInterface dialog, int id) {
                                                             Intent intent = new Intent(Registration.this, MainActivity.class);
