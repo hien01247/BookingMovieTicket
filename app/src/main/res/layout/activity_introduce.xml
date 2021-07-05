@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tv_gioiThieu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Giới thiệu"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/tv_nodunggioithieu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="10dp"
+        android:textColor="@android:color/black"
+        android:text="@string/gioithieu"
+        android:textAlignment="gravity"
+        android:textSize="16sp"
+        android:layout_below="@+id/tv_gioiThieu"
+        />
+    <TextView
+        android:id="@+id/tv_team_sang_lap"
+        android:layout_below="@+id/tv_nodunggioithieu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Thành viên sáng lập"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        android:textStyle="bold"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_thanhvien"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@+id/tv_team_sang_lap"
+        android:layout_width="match_parent"
+        android:layout_height="340dp" />
+</RelativeLayout>

@@ -6,9 +6,12 @@
         <item android:id="@+id/home"
             android:icon="@drawable/ic_home"
             android:title="Trang chủ"/>
+        <item android:id="@+id/showtime"
+            android:icon="@drawable/ic_showtime"
+            android:title="Lịch chiếu"/>
         <item android:id="@+id/movie"
             android:icon="@drawable/ic_movie"
-            android:title="Lịch chiếu"/>
+            android:title="Phim"/>
         <item android:id="@+id/store"
             android:icon="@drawable/ic_ticket"
             android:title="Vé của bạn"/>
@@ -21,9 +24,6 @@
         <item android:id="@+id/login"
             android:icon="@drawable/ic_login"
             android:title="Đăng nhập"/>
-        <item android:id="@+id/logout"
-            android:icon="@drawable/ic_logout"
-            android:title="Thoát"/>
         <item android:id="@+id/information"
             android:title="Thông tin và điều khoản"/>
         <item android:id="@+id/introduction"

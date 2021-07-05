@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/dark_gray">
+    <TextView
+        android:id="@+id/tv_selected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="UIT Cinema Sinh Viên"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:layout_toStartOf="@+id/img_drop_down"
+        android:textSize="16sp"></TextView>
+    <ImageView
+        android:id="@+id/img_drop_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_arrow_drop_down_24"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"></ImageView>
+
+</RelativeLayout>

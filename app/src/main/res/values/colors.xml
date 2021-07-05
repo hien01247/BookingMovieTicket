@@ -20,4 +20,14 @@
     <color name="colorPrimary">#db0000</color>
     <color name="colorAccent">#D81B60</color>
     <color name="colorFacebook">#f55585c5</color>
+    <color name="FlatRed">#FF3B30</color>
+    <color name="FlatGreen">#4CD964</color>
+    <color name="FlatOrange">#FF9500</color>
+    <color name="FlatYellow">#FFCC00</color>
+    <color name="FlatTealBlue">#5AC8FA</color>
+    <color name="FlatPurple">#5856D6</color>
+    <color name="FlatPink">#FF2D55</color>
+    <color name="FlatBlue">#007AFF</color>
+    <color name="setting_label_color">#B8B8B8</color>
+    <color name="panel_background">#090909</color>
 </resources>

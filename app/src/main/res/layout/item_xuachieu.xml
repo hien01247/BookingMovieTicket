@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/giochieu"
+    android:layout_marginEnd="9dp">
+    <TextView
+        android:id="@+id/tvXuatChieu"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="13:00"
+        android:background="@drawable/custom_vien"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"/>
+</RelativeLayout>

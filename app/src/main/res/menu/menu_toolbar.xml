@@ -4,6 +4,6 @@
     <item
         android:id="@+id/ticket"
         android:title="Vé"
-        android:icon="@drawable/ic_ticket"
+        android:icon="@drawable/ic_logo_ticket"
         app:showAsAction="ifRoom"/>
 </menu>

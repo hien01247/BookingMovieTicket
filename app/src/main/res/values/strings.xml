@@ -2,6 +2,8 @@
     <string name="app_name">UIT CINEMA</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="dangchieu">Phim đang chiếu</string>
+    <string name="sapchieu">Phim sắp chiếu</string>
     <string name="name"></string>
     <string name="user"></string>
     <string name="confirm"></string>
@@ -43,4 +45,27 @@
     <b>Âm thanh hình ảnh: </b>Chúng tôi cam kết cung cấp chất lượng âm thanh và hình ảnh theo tiêu chuẩn cao nhằm gìn giữ, quảng bá và nâng cao trải nghiệm điện ảnh như chính sự kỳ vọng của các nhà làm phim và khán giả xem phim.</string>
     <string name="ve">Vui lòng đưa mã số này đến quầy vé UIT Cinema để nhận vé của bạn</string>
     <string name="luuy"><b>Lưu ý</b> UIT Cinema không chấp nhận hoàn tiền hoặc đổi vé đã thanh toán thành công trên website hay trên app UIT Cinema</string>
+
+    <string name="noidungphim1">
+        Cái chết của một cô ca sĩ nổi tiếng dẫn đến sự thành công của một cô ca sĩ trẻ khác. Câu chuyện này có liên quan như thế nào đến sự giúp đỡ của một "thiên thần hộ mệnh"?
+    </string>
+    <string name="noidungphim2">
+        Thế vận hội thể thao lớn nhất thế giới được tổ chức tại Tokyo, Nhật Bản thu hút rất nhiều sự chú ý. Khi sự kiện ra mắt con tàu siêu tốc với tốc độ 1000km/h diễn ra cũng là lúc hàng loạt các vụ bắt cóc xảy ra! Gia tộc hiểm ác tụ tập tại đây sẽ gây ra một loạt sự kiện chấn động thế giới!
+    </string>
+    <string name="noidungphim3">
+        Sau khi bản thân bỗng nhiên sở hữu “Bàn tay diệt quỷ”, võ sĩ MMA Yong Hoo (Park Seo Joon thủ vai) đã dấn thân vào hành trình trừ tà, trục quỷ đối đầu với Giám Mục Bóng Tối (Woo Do Hwan) – tên quỷ Satan đột lốt người. Từ đó sự thật về cái chết của cha Yong Hoo cũng dần được hé lộ cũng như nguyên nhân anh trở thành “người được chọn”.
+    </string>
+    <string name="noidungphim4">
+        “Fast and Furious 9: The Fast Saga” hứa hẹn sẽ đem lại nhiều ngạc nhiên cho người hâm mộ về thân thế của nhân vật do John Cena thủ vai, đồng thời cho tay lái lụa Han Lue tái xuất.
+    </string>
+    <string name="noidungphim5">
+        Lý Hải trở lại với dòng phim hành động sở trường của mình. Bối cảnh hoành tráng với sự đầu tư nghiêm túc, siêu phẩm hành động Việt Lật Mặt 48h sẽ kể về một hành trình trốn chạy đầy kịch tính, nghẹt thở đến phút cuối cùng.
+    </string>
+    <string name="noidungphim6">
+        ‘Đêm Trói Buộc’ kể về câu chuyện của một cặp vợ chồng người Iran (do Shahab Hosseini and Niousha Jafarian thủ vai) và đứa con gái một tuổi phát hiện họ bị nhốt bên trong khách sạn cũ và bị lực lượng ngoại bang cưỡng bức. Song tại đây, họ phải đối mặt với những bí mật mà cả hai đã âm thầm chôn giấu người bạn đời của mình.
+    </string>
+    <string name="noidunngphim7">
+        Phần hai tiếp nối các sự kiện xảy ra trong phần một, khi gia đình Abbot gồm người mẹ Evelyn (do Emily Blunt thủ vai) cùng ba con chạy trốn đến một thành phố tưởng như an toàn. Tuy nhiên, cả gia đình không ngờ rằng ở thế giới bên ngoài cũng đã bị những sinh vật ngoài hành tinh thâu tóm.
+    </string>
+    <string name="title_activity_maps">Map</string>
 </resources>

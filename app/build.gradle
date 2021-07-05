@@ -1,13 +1,14 @@
 plugins {
     id 'com.android.application'
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
 }
-
+apply plugin: 'com.google.gms.google-services'
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.example.bookingmovie"
+        applicationId "com.example.cinemaapp"
         minSdkVersion 26
         targetSdkVersion 30
         versionCode 1
@@ -26,6 +27,9 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
@@ -35,14 +39,35 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'com.google.android.material:material:1.1.0'
     implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation 'com.google.firebase:firebase-storage:20.0.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.1'
+
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-
     implementation 'com.github.bumptech.glide:glide:4.6.1'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.6.1'
 
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
     implementation "androidx.coordinatorlayout:coordinatorlayout:1.1.0"
+
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:chromecast-sender:0.23'
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5'
+
+    implementation 'com.vipulasri:ticketview:1.0.7'
+
+    implementation 'com.braintreepayments:card-form:5.1.1'
+
+    implementation platform('com.google.firebase:firebase-bom:28.1.0')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.android.gms:play-services-auth:19.0.0'
+    implementation 'com.google.firebase:firebase-database'
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-auth:21.0.1'
+    implementation 'com.google.firebase:firebase-database:20.0.0'
+
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+
+
 }

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".DetailShowTime">
 
     <TextView
@@ -15,8 +16,7 @@
         android:text="Thiên thần hộ mệnh"
         android:layout_marginTop="10dp"
         android:textSize="24dp"
-
-        android:textColor="@color/black"/>
+        android:textColor="@color/FlatRed"/>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcv_ngaychieu"
         android:background="@color/blue"
@@ -26,29 +26,37 @@
         android:layout_below="@+id/tv_tphim">
 
     </androidx.recyclerview.widget.RecyclerView>
-    <TextView
-        android:id="@+id/tv_tenrap"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="UIT cinema sinh viên"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="10dp"
+    <Spinner
         android:layout_below="@+id/rcv_ngaychieu"
-        android:textColor="@color/red"/>
+        android:id="@+id/spn_rapphim"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:layout_marginTop="10dp"
+        ></Spinner>
     <TextView
         android:id="@+id/tv_dinhdang"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="2D Vietnam Sub"
+        android:text="2D VietSub "
         android:textSize="20sp"
         android:layout_marginTop="20dp"
         android:layout_marginStart="10dp"
         android:padding="5dp"
         android:drawableLeft="@drawable/ic_baseline_arrow_right_24"
-        android:layout_below="@+id/tv_tenrap"
-        android:textColor="@color/black"/>
+        android:layout_below="@+id/spn_rapphim"
+        android:textColor="@color/white"/>
+    <TextView
+        android:id="@+id/tv_khongxuatchieu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Không có suất chiếu "
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:padding="5dp"
+        android:layout_below="@+id/spn_rapphim"
+        android:textColor="@color/white"/>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcv_xuatChieu"
         android:layout_width="match_parent"
@@ -56,5 +64,23 @@
         android:layout_below="@+id/tv_dinhdang"
         android:layout_marginStart="30dp"
         android:layout_marginTop="5dp"/>
-
+    <TextView
+        android:id="@+id/tv_dinhdang3D"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3D VietSub "
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:padding="5dp"
+        android:drawableLeft="@drawable/ic_baseline_arrow_right_24"
+        android:layout_below="@+id/rcv_xuatChieu"
+        android:textColor="@color/white"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_xuatChieu3D"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_dinhdang3D"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"/>
 </RelativeLayout>

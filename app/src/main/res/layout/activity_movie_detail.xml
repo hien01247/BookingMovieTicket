@@ -9,119 +9,174 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/detail_movie_cover"
+        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+            android:id="@+id/detail_movie_trailer"
             android:layout_width="wrap_content"
-            android:layout_height="245dp"
-            android:scaleType="centerCrop"
+            android:layout_height="220dp"
+            app:autoPlay="false"
+            app:showYouTubeButton="true"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
         <ImageView
             android:id="@+id/detail_movie_img"
-            android:layout_width="125dp"
-            android:layout_height="207dp"
+            android:textColor="@color/black"
+            android:layout_width="118dp"
+            android:layout_height="156dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="308dp"
+            android:layout_marginTop="4dp"
             android:scaleType="centerCrop"
             android:transitionName="sharedName"
-            app:layout_constraintBottom_toBottomOf="@+id/detail_movie_cover"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/detail_movie_cover"
-            app:layout_constraintVertical_bias="0.798"
+            app:layout_constraintTop_toBottomOf="@+id/detail_movie_trailer"
             tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
             android:id="@+id/detail_movie_title"
+
             android:layout_width="236dp"
-            android:layout_height="30dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="40dp"
             android:layout_marginEnd="16dp"
             android:text="TextView"
-            android:textColor="@android:color/black"
-            android:textSize="24sp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="26sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.555"
             app:layout_constraintStart_toEndOf="@+id/detail_movie_img"
-            app:layout_constraintTop_toBottomOf="@+id/detail_movie_cover" />
+            app:layout_constraintTop_toBottomOf="@+id/detail_movie_trailer" />
 
         <TextView
             android:id="@+id/detail_movie_desc"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="370dp"
+            android:layout_height="141dp"
             android:layout_margin="16dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="10dp"
             android:lineSpacingExtra="8dp"
-            android:text="Cái chết của một cô ca sĩ nổi tiếng dẫn đến sự thành công của một cô ca sĩ trẻ khác. Câu chuyện này có liên quan như thế nào đến sự giúp đỡ của một thiên thần hộ mệnh?"
-            android:textColor="@android:color/holo_blue_light"
+            android:scrollbars="vertical"
+            android:text="thiên thần hộ mệnh?"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.888"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/detail_movie_img"></TextView>
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/play_tab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            app:layout_constraintBottom_toBottomOf="@+id/detail_movie_cover"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/detail_movie_cover"
-            app:layout_constraintTop_toTopOf="@+id/detail_movie_cover"
-            app:srcCompat="@android:drawable/ic_media_play" />
-
         <Button
             android:id="@+id/btn_booking"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
             android:layout_marginTop="10dp"
+            android:background="@drawable/button"
             android:text="Đặt vé"
             app:layout_constraintBottom_toTopOf="@+id/detail_movie_desc"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.969"
+            app:layout_constraintHorizontal_bias="0.951"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/detail_movie_title"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.307" />
 
         <TextView
-            android:id="@+id/txtKiemDuyet"
+            android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Kiếm duyệt"
-            tools:layout_editor_absoluteX="130dp"
-            tools:layout_editor_absoluteY="702dp" />
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="20dp"
+            android:text="Kiếm duyệt:"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detail_movie_desc" />
 
         <TextView
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Khởi chiếu"
-            tools:layout_editor_absoluteX="287dp"
-            tools:layout_editor_absoluteY="692dp" />
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="14dp"
+            android:text="Khởi chiếu:"
+            android:textColor="@color/black"
+
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
         <TextView
             android:id="@+id/textView11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Thể loại"
-            tools:layout_editor_absoluteX="201dp"
-            tools:layout_editor_absoluteY="728dp" />
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="14dp"
+            android:text="Thể loại:"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
         <TextView
             android:id="@+id/textView13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Thời lượng"
-            tools:layout_editor_absoluteX="27dp"
-            tools:layout_editor_absoluteY="683dp" />
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="14dp"
+            android:text="Thời lượng:"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
         <TextView
-            android:id="@+id/textView15"
+            android:id="@+id/txtKiemDuyet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Đạo diễn"
-            tools:layout_editor_absoluteX="95dp"
-            tools:layout_editor_absoluteY="728dp" />
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="20dp"
+            android:text="TextView"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/textView8"
+            app:layout_constraintTop_toBottomOf="@+id/detail_movie_desc" />
+
+        <TextView
+            android:id="@+id/txtTheLoai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="14dp"
+            android:text="TextView"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/textView11"
+            app:layout_constraintTop_toBottomOf="@+id/txtKiemDuyet" />
+
+        <TextView
+            android:id="@+id/txtKhoiChieu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="18dp"
+            android:text="TextView"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/textView9"
+            app:layout_constraintTop_toBottomOf="@+id/txtTheLoai" />
+
+        <TextView
+            android:id="@+id/txtThoiLuong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="12dp"
+            android:text="TextView"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/textView13"
+            app:layout_constraintTop_toBottomOf="@+id/txtKhoiChieu" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
