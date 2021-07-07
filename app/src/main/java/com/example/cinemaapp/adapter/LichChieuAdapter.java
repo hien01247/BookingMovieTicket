@@ -56,6 +56,13 @@ public class LichChieuAdapter extends RecyclerView.Adapter<LichChieuAdapter.Lich
                 }
             }
         }
+        for (int i=0; i<mListLichChieu.size()-1; i++){
+            for (int j=i+1; j<mListLichChieu.size();j++){
+                if(mListLichChieu.get(i).getTenPhim().equals(mListLichChieu.get(j).getTenPhim())){
+                    mListLichChieu.remove(j);
+                }
+            }
+        }
         Log.d("hey",String.valueOf(mListLichChieu));
         notifyDataSetChanged();
     }
