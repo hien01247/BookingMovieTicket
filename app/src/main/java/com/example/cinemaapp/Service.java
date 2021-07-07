@@ -34,6 +34,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.DecimalFormat;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -109,6 +110,7 @@ public class Service extends AppCompatActivity {
             }
 
             public void setOnSelectedChanged(List<Integer> selects) {
+                DecimalFormat formatter = new DecimalFormat("###,###,###");
                 int total = 0;
                 String dichVuTong = "";
                 mSelects.clear();
@@ -124,7 +126,7 @@ public class Service extends AppCompatActivity {
                 }
                 total = total + tong;
                 tenDichVu = dichVuTong;
-                tvPrice.setText(String.valueOf(total) + " ₫");
+                tvPrice.setText(formatter.format(total) + " ₫");
             }
 
 
