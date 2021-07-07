@@ -91,7 +91,8 @@ public class Payment extends AppCompatActivity {
 
                                     if (task.isSuccessful()) {
                                         String[] tien = tvtongTien.getText().toString().split(" ₫");
-                                        int bonus = Integer.parseInt(tien[0]);
+                                        String tien1=tien[0].replaceAll(",","");
+                                        int bonus = Integer.parseInt(tien1);
                                         userRef.child("diemTichLuy").setValue(diemtichluy + bonus / 1000);
                                         updateTrangThaiGhe();
 
