@@ -30,6 +30,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -86,6 +87,7 @@ public class ChooseSeat extends AppCompatActivity {
                     luutrangthaighe();
                     Intent i = new Intent(ChooseSeat.this, Service.class);
                     // i.putExtra("tongTien",mPriceValue);
+
                     i.putExtra("total", mPriceValue);
                     startActivity(i);
                 } else {
@@ -187,6 +189,7 @@ public class ChooseSeat extends AppCompatActivity {
     private List<Integer> mSelects = new ArrayList<>();
 
     public void setOnSelectedChanged(List<Integer> selects) {
+        DecimalFormat formatter = new DecimalFormat("###,###,###");
         mSelects.clear();
         mSelects.addAll(selects);
 
@@ -202,7 +205,7 @@ public class ChooseSeat extends AppCompatActivity {
             }
 
             mSeatList.setText(text);
-            mPrice.setText(mPriceValue + " ₫");
+            mPrice.setText(formatter.format(mPriceValue) + " ₫");
         } else {
             Toast.makeText(getApplicationContext(), "Bạn chỉ chọn được tối đa 8 ghế", Toast.LENGTH_SHORT).show();
         }

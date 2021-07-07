@@ -48,6 +48,8 @@ public class Service extends AppCompatActivity {
     private Button btnDatVe;
     int tong;
     private List<DichVu> list = new ArrayList<>();
+    DecimalFormat formatter = new DecimalFormat("###,###,###");
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,7 +91,7 @@ public class Service extends AppCompatActivity {
                 rcvKhuyenMai.setAdapter(chonDoUongAdapter);
                 Intent intent = getIntent();
                 tong = intent.getIntExtra("total", 0);
-                tvPrice.setText(String.valueOf(tong) + " ₫");
+                tvPrice.setText(String.valueOf(formatter.format(tong)) + " ₫");
                 //datVe();
                 btnDatVe = findViewById(R.id.btn_TTDV);
                 btnDatVe.setOnClickListener(new View.OnClickListener() {
@@ -110,7 +112,6 @@ public class Service extends AppCompatActivity {
             }
 
             public void setOnSelectedChanged(List<Integer> selects) {
-                DecimalFormat formatter = new DecimalFormat("###,###,###");
                 int total = 0;
                 String dichVuTong = "";
                 mSelects.clear();
