@@ -149,6 +149,7 @@ public class ChooseSeat extends AppCompatActivity {
                     }
                 }
                 mAdapter.setData(listtrangthai);
+                mRecyclerView.setAdapter(mAdapter);
                 Log.d("get_lc",listtrangthai.get(4));
 
             }
