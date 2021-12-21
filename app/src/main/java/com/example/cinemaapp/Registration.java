@@ -64,9 +64,6 @@ public class Registration extends AppCompatActivity {
         buttonReg = findViewById(R.id.btn_capnhap);
         progressBar_SignUp = findViewById(R.id.progressBar_SignUp);
         mAuth = FirebaseAuth.getInstance();
-//        DB = new BookingCinemaDatabase(Registration.this);
-//        DB.open();
-
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Đăng kí tài khoản");

@@ -78,6 +78,8 @@ public class ForgetPass extends AppCompatActivity {
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()){
                             Toast.makeText(ForgetPass.this,"Kiểm tra email để đặt lại mật khẩu",Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                            startActivity(intent);
                         }else {
                             Toast.makeText(ForgetPass.this,"Có lỗi xảy ra! Xin thử lại sau",Toast.LENGTH_SHORT).show();
                         }

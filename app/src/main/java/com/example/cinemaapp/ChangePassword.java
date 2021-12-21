@@ -115,8 +115,6 @@ public class ChangePassword extends AppCompatActivity {
                     // Get credentials of the actual user
                     AuthCredential credential = EmailAuthProvider.getCredential(mAuth.getCurrentUser().getEmail(), currentPassword);
 
-                    // Change the password the actual user not the password so the best choice
-                    // Reauthenticate the actual user
                     mAuth.getCurrentUser().reauthenticate(credential)
                             .addOnCompleteListener(new OnCompleteListener<Void>() {
 

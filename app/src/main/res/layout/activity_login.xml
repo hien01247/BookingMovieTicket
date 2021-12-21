@@ -16,7 +16,7 @@
         android:layout_marginTop="24dp"
         android:backgroundTint="@color/white"
         android:drawableLeft="@drawable/google_logo"
-        android:text="Sign in with Google"
+        android:text="Đăng nhập bằng tài khoản Google"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

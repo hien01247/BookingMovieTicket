@@ -94,9 +94,7 @@ public class AccountInfo extends AppCompatActivity {
         hoten = findViewById(R.id.txt_Acc_name);
         email = findViewById(R.id.txt_Acc_email);
         sdt = findViewById(R.id.txt_Acc_sdt);
-        if (gAuth.equals("true")){
-            email.setEnabled(false);
-        }
+        email.setEnabled(false);
         imageView_cpUserImage = findViewById(R.id.imageView_cpUserImage2);
 
         userRef.addValueEventListener(new ValueEventListener() {
